@@ -1,0 +1,313 @@
+
+/* grid.css - Grid 7×12 Styles */
+
+/* ===== GRID CONTAINER ===== */
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-6);
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-6);
+    padding: var(--space-6);
+    background: var(--color-card-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.grid-info h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.grid-info #grid-code {
+    color: var(--color-accent-500);
+    font-weight: var(--font-weight-bold);
+}
+
+.grid-info #grid-meta {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.grid-stats {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.grid-stat {
+    text-align: center;
+}
+
+.grid-stat .stat-label {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    margin-bottom: var(--space-2);
+}
+
+.grid-stat .stat-value-large {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent-500);
+}
+
+/* ===== PERIOD TOGGLE (AM/PM) ===== */
+.period-toggle {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-bottom: var(--space-6);
+}
+
+.period-btn {
+    padding: var(--space-3) var(--space-8);
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.period-btn:hover {
+    border-color: var(--color-accent-500);
+    color: var(--color-text-primary);
+}
+
+.period-btn.active {
+    background: var(--color-accent-500);
+    border-color: var(--color-accent-500);
+    color: var(--color-primary-900);
+    box-shadow: 0 0 20px rgba(125, 211, 252, 0.4);
+}
+
+/* ===== SLOT GRID 7×12 ===== */
+.slot-grid {
+    display: grid;
+    grid-template-columns: 60px repeat(7, 1fr);
+    gap: 4px;
+    background: var(--color-card-bg);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--space-6);
+}
+
+/* Header row (days) */
+.grid-day-header {
+    grid-column: 1;
+    background: transparent;
+}
+
+.grid-day {
+    background: var(--color-primary-700);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+}
+
+/* Hour labels (left column) */
+.grid-hour {
+    background: var(--color-primary-700);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    text-align: center;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Grid cells (slots) */
+.grid-cell {
+    background: var(--color-slot-empty);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    min-height: 48px;
+    cursor: pointer;
+    position: relative;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-cell:hover:not(.cell-disabled) {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+}
+
+/* Cell states */
+.grid-cell.cell-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.grid-cell.cell-searched {
+    cursor: not-allowed;
+}
+
+/* Proximity colors */
+.grid-cell.cell-far {
+    background: var(--color-slot-far);
+    border-color: var(--color-slot-far);
+}
+
+.grid-cell.cell-close {
+    background: var(--color-slot-close);
+    border-color: var(--color-slot-close);
+}
+
+.grid-cell.cell-very-close {
+    background: var(--color-slot-very-close);
+    border-color: var(--color-slot-very-close);
+}
+
+.grid-cell.cell-hit {
+    background: var(--color-slot-hit);
+    border-color: var(--color-slot-hit);
+    animation: pulseHit 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseHit {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+    50% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+}
+
+.grid-cell.cell-booked {
+    background: var(--color-slot-booked);
+    border-color: var(--color-slot-booked);
+    cursor: default;
+}
+
+/* Cell icons */
+.cell-icon {
+    font-size: 24px;
+}
+
+/* Slot fill (for 30min vs 60min visual) */
+.slot-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--color-accent-500);
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    opacity: 0.3;
+}
+
+.slot-fill.half {
+    width: 50%;
+}
+
+.slot-fill.full {
+    width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+/* Price badge */
+.price-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: var(--color-primary-900);
+    color: var(--color-accent-500);
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+/* ===== LEGEND ===== */
+.grid-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    padding: var(--space-4);
+    background: var(--color-card-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--space-6);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.legend-color {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+}
+
+.legend-color.far { background: var(--color-slot-far); }
+.legend-color.close { background: var(--color-slot-close); }
+.legend-color.very-close { background: var(--color-slot-very-close); }
+.legend-color.hit { background: var(--color-slot-hit); }
+
+.legend-item span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .grid-header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+    
+    .slot-grid {
+        grid-template-columns: 50px repeat(7, 1fr);
+        gap: 3px;
+    }
+    
+    .grid-cell {
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slot-grid {
+        grid-template-columns: 40px repeat(7, 1fr);
+        gap: 2px;
+    }
+    
+    .grid-cell {
+        min-height: 36px;
+    }
+    
+    .grid-day,
+    .grid-hour {
+        font-size: 10px;
+        padding: var(--space-1);
+    }
+    
+    .grid-legend {
+        flex-wrap: wrap;
+        gap: var(--space-3);
+    }
+    
+    .grid-stats {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+}
