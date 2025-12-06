@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestCoins Economy - SlotQuest&Match</title>
+    <style>
+        /* Importamos las variables del proyecto, pero si no están, definimos unas básicas */
+        :root {
+            --color-background: #051426;
+            --color-card-bg: #071a2b;
+            --color-text-primary: #e6eef8;
+            --color-text-muted: #94a3b8;
+            --color-accent-cyan: #7dd3fc;
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+            --color-danger: #ef4444;
+            --border-radius: 12px;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border, #334155);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--color-accent-cyan);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        /*Agregado */
+
+        .logo-img {
+            display: inline-flex;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+        }
+
+
+        .back-button {
+            background-color: var(--color-card-bg);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-accent-cyan);
+            border-radius: 8px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: rgba(125, 211, 252, 0.1);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--color-accent-cyan);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--color-text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--color-accent-cyan);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        .positive {
+            color: var(--color-success);
+        }
+
+        .negative {
+            color: var(--color-danger);
+        }
+
+        .neutral {
+            color: var(--color-warning);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--color-border, #334155);
+            color: var(--color-text-muted);
+        }
+
+        .footer a {
+            color: var(--color-accent-cyan);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="../assets/logo/Slots-Quest-Logo.jpeg" alt="SlotQuest Logo" class="logo-img">
+                <span class="logo-text">SlotQuest&Match</span>
+            </a>
+            <a href="../index.html" class="back-button">Back To Home Page</a>
+            <a href="../app.html" class="back-button">← Back to App</a>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>How QuestCoins Work</h1>
+            <p>QuestCoins (QC) are the in-platform currency that powers the SlotQuest&Match economy. Earn them by participating, spend them to book meetings, and manage them wisely to maximize your productivity.</p>
+        </section>
+
+        <!-- Earning QC -->
+        <section class="cards-container">
+            <div class="card">
+                <h2><span class="icon">💰</span> Earning QC</h2>
+                <ul>
+                    <li><span class="icon positive">✅</span> <strong>Welcome bonus:</strong> +30 QC on first login</li>
+                    <li><span class="icon positive">✅</span> <strong>Complete meetings (Setter):</strong> +slot price</li>
+                    <li><span class="icon positive">✅</span> <strong>Complete meetings (Seeker):</strong> +5 QC</li>
+                    <li><span class="icon positive">✅</span> <strong>Referral bonus:</strong> +10 QC per referral</li>
+                    <li><span class="icon positive">✅</span> <strong>Daily login streak:</strong> up to +5 QC</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">💸</span> Spending QC</h2>
+                <ul>
+                    <li><span class="icon negative">🎯</span> <strong>Purchase slots:</strong> varies (1-25 QC)</li>
+                    <li><span class="icon negative">🎯</span> <strong>Buy Shots:</strong> 1 QC each</li>
+                    <li><span class="icon negative">🎯</span> <strong>Cancel meetings:</strong> -5 QC penalty</li>
+                    <li><span class="icon negative">🎯</span> <strong>Reveal hints:</strong> 3 QC per hint</li>
+                    <li><span class="icon negative">🎯</span> <strong>Priority booking:</strong> 10 QC extra</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Penalties -->
+        <section class="card" style="grid-column: 1 / -1;">
+            <h2><span class="icon">⚠️</span> Penalties</h2>
+            <ul>
+                <li><span class="icon negative">❌</span> <strong>No-show (Seeker):</strong> -15 QC and -10 XP</li>
+                <li><span class="icon negative">❌</span> <strong>No-show (Setter):</strong> -22 QC and -15 XP</li>
+                <li><span class="icon negative">⏰</span> <strong>Late arrival (5+ minutes):</strong> -5 QC</li>
+                <li><span class="icon negative">📵</span> <strong>Meeting without confirmation:</strong> No QC earned</li>
+                <li><span class="icon negative">🔁</span> <strong>Multiple cancellations:</strong> Increasing penalties</li>
+            </ul>
+        </section>
+
+        <!-- Tips -->
+        <section class="card" style="grid-column: 1 / -1;">
+            <h2><span class="icon">💡</span> Tips for Managing QC</h2>
+            <ul>
+                <li><span class="icon neutral">🎯</span> <strong>Be punctual:</strong> Avoid late penalties</li>
+                <li><span class="icon neutral">🎯</span> <strong>Don't overbook:</strong> Only book meetings you can attend</li>
+                <li><span class="icon neutral">🎯</span> <strong>Buy Shots strategically:</strong> Use when you have good leads</li>
+                <li><span class="icon neutral">🎯</span> <strong>Complete meetings:</strong> Both parties must confirm</li>
+                <li><span class="icon neutral">🎯</span> <strong>Monitor your balance:</strong> Keep enough QC for penalties</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Need help? Contact support@slotquest.com</p>
+            <p>Return to <a href="../app.html">SlotQuest&Match App</a></p>
+            <p style="margin-top: 20px; font-size: 14px;">© 2025 SlotQuest&Match. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
