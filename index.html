@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlotQuest&Match - Home</title>
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/landing.css">
+
+    <style>
+        #Launch-app{
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/Slots-Quest-Logo.jpeg" alt="SlotQuest Logo" class="logo-img">
+                <span class="logo-text">SlotQuest&Match</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#use-cases">Use Cases</a>
+                <a href="app.html" class="btn-primary" id="Launch-app">Launch App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Turn Timezone Hell into a Playable Game</h1>
+                <p class="hero-subtitle">Coordinate meetings across the world without the email ping-pong. Find slots like Battleship, sign smart contracts, earn rewards.</p>
+                <div class="hero-cta">
+                    <a href="app.html" class="btn-large btn-primary">Start Playing Now</a>
+                    <a href="#how-it-works" class="btn-large btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/illustrations/Remote meeting-cuate.svg" alt="Remote coordination illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section" id="problem">
+        <div class="container">
+            <h2 class="section-title">The Problem We Solve</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">📧</div>
+                    <h3>Email Ping-Pong Hell</h3>
+                    <p>"Can we talk Tuesday 3pm?" → "Which timezone?" → "That's 2am for me..." → 30 messages later...</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🌍</div>
+                    <h3>Timezone Confusion</h3>
+                    <p>Manual UTC conversions, daylight savings chaos, "Is that your morning or mine?"</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Missed Connections</h3>
+                    <p>Messages seen 2 days later, different sleep schedules, asynchronous availability</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">😤</div>
+                    <h3>No-Shows & Flakes</h3>
+                    <p>No commitment mechanism, easy to ghost, time wasted on unreliable people</p>
+                </div>
+            </div>
+            <div class="problem-visual">
+                <img src="assets/illustrations/undraw_distractions_jmxk.svg" alt="Email chaos illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">The SlotQuest Solution</h2>
+            <p class="section-subtitle">Transform scheduling frustration into an interactive game with real commitment</p>
+            
+            <div class="solution-grid">
+                <div class="solution-feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Setter Creates Slots</h3>
+                    <p>Mark your available times in a visual 7×12 grid. Set dynamic prices for different time slots (prime time costs more).</p>
+                </div>
+                <div class="solution-arrow">→</div>
+                <div class="solution-feature">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Seeker Hunts for Slots</h3>
+                    <p>Play Battleship with calendars. Visual hints show proximity. Find the perfect meeting time through strategic searching.</p>
+                </div>
+                <div class="solution-arrow">→</div>
+                <div class="solution-feature">
+                    <div class="feature-icon">📜</div>
+                    <h3>Smart Contracts Enforce</h3>
+                    <p>Both parties sign clear terms. Automatic penalties for no-shows. Reputation scores track reliability.</p>
+                </div>
+            </div>
+
+            <div class="solution-visual">
+                <img src="assets/illustrations/Timeline-pana.svg" alt="Solution workflow">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">5 simple steps to coordinate meetings globally</p>
+
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Setter Creates Availability</h3>
+                        <ul>
+                            <li>Mark available time slots in 7-day grid</li>
+                            <li>Set price for each slot (1-25 QuestCoins)</li>
+                            <li>Define terms: duration, cancellation policy, late tolerance</li>
+                            <li>Generate unique invitation code</li>
+                        </ul>
+                        <div class="step-visual">
+                            <div class="mini-grid">
+                                <div class="mini-cell"></div>
+                                <div class="mini-cell filled"></div>
+                                <div class="mini-cell"></div>
+                                <div class="mini-cell filled"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Share Invitation Code</h3>
+                        <ul>
+                            <li>Send code via email, WhatsApp, Discord or any channel</li>
+                            <li>No need to expose full calendar</li>
+                            <li>One code per week for privacy control</li>
+                            <li>Revoke access anytime</li>
+                        </ul>
+                        <div class="code-example">
+                            <code>SQM-MAX-A3F9</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Seeker Hunts for Slots</h3>
+                        <ul>
+                            <li>Enter code to load grid (slots hidden initially)</li>
+                            <li>Click cells to search (costs 1 Shot per attempt)</li>
+                            <li>Visual hints guide your search:
+                                <span class="hint-demo">
+                                    <span class="hint-far">🔴 Far</span>
+                                    <span class="hint-close">🟡 Close</span>
+                                    <span class="hint-very-close">🟢 Very Close</span>
+                                    <span class="hint-hit">🎯 Hit!</span>
+                                </span>
+                            </li>
+                            <li>Strategic searching like Battleship game</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Review & Sign Contract</h3>
+                        <ul>
+                            <li>View slot details (time in both timezones, price, duration)</li>
+                            <li>Read clear terms and penalties</li>
+                            <li>Agree to commitment</li>
+                            <li>QuestCoins go to escrow until meeting completion</li>
+                        </ul>
+                        <div class="contract-preview">
+                            <div class="contract-line">📅 Tuesday, 08:00 GMT → 17:00 JST</div>
+                            <div class="contract-line">⏱️ Duration: 60 min</div>
+                            <div class="contract-line">💰 Price: 15 QC</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Meet & Confirm</h3>
+                        <ul>
+                            <li>Both parties receive reminders</li>
+                            <li>Attend meeting at scheduled time</li>
+                            <li>Confirm completion in app</li>
+                            <li>Coins released, XP awarded, reputation updated</li>
+                        </ul>
+                        <div class="reward-display">
+                            <span class="reward-item">✅ Meeting Complete</span>
+                            <span class="reward-item">+5 XP</span>
+                            <span class="reward-item">+15 QC (Setter)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-large">🌍</div>
+                    <h3>Automatic Timezone Conversion</h3>
+                    <p>See everything in your local time. No manual UTC calculations. Smart display shows context (morning/evening) for both parties.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-large">💰</div>
+                    <h3>QuestCoins Economy</h3>
+                    <p>Dynamic pricing system. Value your time differently based on convenience. Prime hours cost more, off-peak hours less.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-large">🎯</div>
+                    <h3>Visual Search Game</h3>
+                    <p>Color-coded proximity hints make finding slots engaging. Strategic thinking required. Turn frustration into fun.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-large">📜</div>
+                    <h3>Smart Contracts</h3>
+                    <p>Clear terms upfront. Automatic enforcement. No disputes about what was agreed. Escrow protects both parties.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-large">⭐</div>
+                    <h3>Reputation System</h3>
+                    <p>XP Punctual Score tracks reliability. High XP = trustworthy. Low XP = unreliable. Build credibility over time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-large">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Share access to specific weeks only. No need to expose full calendar. Revoke invitations anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases-section" id="use-cases">
+        <div class="container">
+            <h2 class="section-title">Who Uses SlotQuest?</h2>
+            
+            <div class="use-case">
+                <div class="use-case-content">
+                    <div class="use-case-icon">👨‍💼</div>
+                    <h3>Mentors & Consultants</h3>
+                    <p><strong>Pain:</strong> 50+ coordination emails per week. Some hours are more valuable than others.</p>
+                    <p><strong>Solution:</strong> Set dynamic pricing. 9am slot = 10 QC (prime). 11pm slot = 25 QC (premium). Let demand decide.</p>
+                    <blockquote>"I'm a startup mentor in SF with clients in India, Spain, and Brazil. SlotQuest lets me charge more for inconvenient hours.
+						<br>My 11pm slots now actually get booked at fair prices."</blockquote>
+                </div>
+                <div class="use-case-image">
+                    <img src="assets/illustrations/Remote meeting-pana.svg" alt="Mentor illustration">
+                </div>
+            </div>
+
+            <div class="use-case reverse">
+                <div class="use-case-content">
+                    <div class="use-case-icon">🌐</div>
+                    <h3>Remote Teams</h3>
+                    <p><strong>Pain:</strong> 10-50 people across 5+ timezones. Finding meeting overlap = nightmare.</p>
+                    <p><strong>Solution:</strong> Team members mark availability. System finds common slots automatically. Visual heat map shows best times.</p>
+                    <blockquote>"Our startup has team in NYC, London, and Tokyo. SlotQuest turned our weekly All-Hands coordination from 15 emails to 1 code share."</blockquote>
+                </div>
+                <div class="use-case-image">
+                    <img src="assets/illustrations/Timeline-rafiki.svg" alt="Team illustration">
+                </div>
+            </div>
+
+            <div class="use-case">
+                <div class="use-case-content">
+                    <div class="use-case-icon">🤝</div>
+                    <h3>International Networking</h3>
+                    <p><strong>Pain:</strong> Want to connect globally but coordination friction kills momentum.</p>
+                    <p><strong>Solution:</strong> Casual coffee chats with game-like booking. Low stakes, high engagement.</p>
+                    <blockquote>"I'm a freelance designer in Buenos Aires.
+						<br>SlotQuest makes connecting with designers in Europe and Asia feel like a game instead of work."</blockquote>
+                </div>
+                <div class="use-case-image">
+                    <img src="assets/illustrations/undraw_problem-solving_1kpx.svg" alt="Networking illustration">
+                </div>
+            </div>
+
+            <div class="use-case reverse">
+                <div class="use-case-content">
+                    <div class="use-case-icon">👥</div>
+                    <h3>Friend Groups</h3>
+                    <p><strong>Pain:</strong> Friends scattered globally. "When can we all play games?" = 50 messages.</p>
+                    <p><strong>Solution:</strong> Fun, low-pressure way to find time together. No formal commitment needed.</p>
+                    <blockquote>"My gaming group is in 4 continents. We use SlotQuest to schedule our Friday night sessions. 
+						<br>The search game is almost as fun as the actual games."</blockquote>
+                </div>
+                <div class="use-case-image">
+                    <img src="assets/icons/schedule.png" alt="Friends illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Stop the Timezone Madness?</h2>
+            <p>Join professionals worldwide who coordinate smarter, not harder.</p>
+            <a href="app.html" class="btn-large btn-primary">Launch SlotQuest Now →</a>
+            <p class="cta-note">Free to start · No credit card required · Early access</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="app.html">Launch App</a>
+                    <a href="pages/economy.html">QuestCoins Economy</a>
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="COMMING-SOON" target="_blank">Smart Contracts Explainer</a>
+                    <a href="pages/economy.html">Economy Guide</a>
+                    <a href="#use-cases">Use Cases</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="pages/copyright.html">Copyright & IP</a>
+                    <a href="pages/copyright.html#dmca">DMCA Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <p>Contact me</p>
+                    <p class="footer-note">For access requests, reach out directly.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 SlotQuest&Match. All rights reserved.</p>
+                <p>Made with ❤️ by Benn GENIO</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
